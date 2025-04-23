@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillBarter | Exchange Skills</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #e0f7ff, #ffffff);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: #1e3a8a;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #a0c4ff;
+    }
+
+    .hero {
+      height: 90vh;
+      background: linear-gradient(to right, rgba(255,255,255,0.8), rgba(224,247,255,0.9)),
+                  url('https://images.unsplash.com/photo-1605902711622-cfb43c4437d1?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      background: linear-gradient(-45deg, #007bff, #00c3ff, #000000, #007bff);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glowingText 6s ease infinite;
+    }
+
+    @keyframes glowingText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    .cta-button {
+      padding: 15px 35px;
+      font-size: 1rem;
+      background: linear-gradient(to right, #007bff, #00bfff);
+      border: none;
+      border-radius: 30px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s;
+      box-shadow: 0 5px 20px rgba(0, 123, 255, 0.3);
+    }
+
+    .cta-button:hover {
+      transform: scale(1.1);
+    }
+
+    .skill-listings {
+      padding: 60px 40px;
+      text-align: center;
+      background: #f7fcff;
+    }
+
+    .skill-listings h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #007bff;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .skill-card {
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 20px;
+      padding: 25px;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .skill-card:hover {
+      transform: translateY(-10px);
+      border-color: #00bfff;
+    }
+
+    .skill-card h3 {
+      font-size: 1.4rem;
+      color: #007bff;
+    }
+
+    .skill-card p {
+      margin: 10px 0;
+      color: #555;
+    }
+
+    .connect-btn {
+      padding: 10px 25px;
+      background: #00bfff;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .connect-btn:hover {
+      background: #007bff;
+    }
+
+    .about-us-section {
+      background: radial-gradient(circle at top left, #d8f0ff, #ffffff);
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .about-content {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      border-radius: 25px;
+      padding: 40px;
+      box-shadow: 0 8px 30px rgba(0, 123, 255, 0.1);
+    }
+
+    .about-content h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      background: linear-gradient(to right, #007bff, #00bfff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .about-content p {
+      font-size: 1.1rem;
+      color: #222;
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 60px 40px;
+      background: #f0fbff;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(8px);
+      border-radius: 20px;
+      padding: 35px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      text-align: center;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(0, 123, 255, 0.2);
+    }
+
+    .glass-card h3 {
+      font-size: 1.5rem;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .glass-card p {
+      font-size: 1rem;
+      color: #444;
+    }
+
+    footer {
+      background: #f0f8ff;
+      padding: 30px 20px;
+      text-align: center;
+      color: #555;
+    }
+
+    .social-links {
+      margin-top: 15px;
+    }
+
+    .social-icon {
+      color: #007bff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .social-icon:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      nav {
+        padding: 15px 20px;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">SkillBarter</div>
+    <ul class="nav-links">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="find-skills.html">Find Skills</a></li>
+      <li><a href="post-skill.html">Post Skill</a></li>
+      <li><a href="message.html">Messages</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="login.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1>Barter Skills. Build Community.</h1>
+    <p>Trade what you know for what you want to learn. Grow together.</p>
+    <button class="cta-button" onclick="window.location.href='get-started-page.html'">Get Started</button>
+  </section>
+
+  <section class="skill-listings">
+    <h2>Trending Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>UI/UX Design</h3>
+        <p>By: Priya K.</p>
+        <button class="connect-btn">Connect</button>
+      </div>
+      <div class="skill-card">
+        <h3>Python Programming</h3>
+        <p>By: Rahul M.</p>
+        <button class="connect-btn">Connect</button>
+      </div>
+      <div class="skill-card">
+        <h3>Photography</h3>
+        <p>By: Anjali S.</p>
+        <button class="connect-btn">Connect</button>
+      </div>
+      <div class="skill-card">
+        <h3>Guitar Lessons</h3>
+        <p>By: Aman R.</p>
+        <button class="connect-btn">Connect</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-us-section">
+    <div class="about-content">
+      <h1>Welcome to SkillBarter</h1>
+      <p>
+        SkillBarter is more than a platform — it's a movement. Imagine a world where money isn't the currency, but <strong>skills</strong> are. Whether you're a coder learning guitar or a baker wanting to speak in public, this is your playground. Connect. Teach. Learn. Grow. All while building a meaningful community.
+      </p>
+      <p>
+        <strong>Trade your talent</strong> for knowledge. Here, every person has something to offer and something to learn. Let’s create a world where collaboration replaces competition.
+      </p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="glass-card">
+      <h3>🚀 Post Skills</h3>
+      <p>Show the world what you’re great at and inspire others to grow.</p>
+    </div>
+    <div class="glass-card">
+      <h3>🔍 Find Skills</h3>
+      <p>Explore new talents and find the perfect skill match for your journey.</p>
+    </div>
+    <div class="glass-card">
+      <h3>💬 Message Users</h3>
+      <p>Connect instantly with skill sharers and start a conversation that matters.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 SkillBarter. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#" class="social-icon">Facebook</a>
+      <a href="#" class="social-icon">Twitter</a>
+      <a href="#" class="social-icon">Instagram</a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Skills - Skill Barter Platform</title>
+    <link rel="stylesheet" href="post-skill-style.css">
+    <script src="post-skill.js" defer></script>
+    <script src="app.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    
+  <nav>
+    <div class="logo">SkillBarter</div>
+    <ul class="nav-links">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="find-skills.html">Find Skills</a></li>
+      <li><a href="post-skill.html">Post Skill</a></li>
+      <li><a href="message.html">Messages</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="login.html">Logout</a></li>
+    </ul>
+  </nav>
+
+
+    <!-- Post Skill Section -->
+    <section class="post-skill-section">
+        <div class="form-container">
+            <h2 class="section-title">Post a Skill</h2>
+            <form id="postSkillForm" class="skill-form">
+                <input type="text" id="skillName" placeholder="Enter Skill Name" required>
+                <input type="text" id="yourName" placeholder="Your Name" required>
+                <textarea id="description" placeholder="Describe your skill..." required></textarea>
+                
+                <!-- New Course Duration Input Field -->
+                <input type="text" id="courseDuration" placeholder="Course Duration" required min="1">
+                
+                <button type="submit" class="submit-btn">Post Skill</button>
+                <div id="formFeedback" class="feedback">Please fill out all fields correctly.</div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 SkillBarter. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#" class="social-icon">🌐 Website</a>
+            <a href="#" class="social-icon">📘 Facebook</a>
+            <a href="#" class="social-icon">🐦 Twitter</a>
+            <a href="#" class="social-icon">📷 Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>

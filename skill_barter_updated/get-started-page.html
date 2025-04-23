@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get Started - SkillBarter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #fff3e0);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1e3a8a;
+      color: #fff;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #fbbf24;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      max-width: 1000px;
+      width: 100%;
+      padding: 40px;
+      margin: 0 auto;
+      margin-top: 2rem;
+    }
+
+    .grid-item {
+      background: linear-gradient(135deg, #ffffff, #dbeafe);
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      padding: 40px 30px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .grid-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .grid-item h2 {
+      font-size: 1.6rem;
+      color: #1e3a8a;
+      margin-bottom: 10px;
+    }
+
+    .grid-item p {
+      font-size: 1rem;
+      color: #4b5563;
+      margin-bottom: 20px;
+    }
+
+    .start-btn {
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(135deg, #3b82f6, #6366f1);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+    }
+
+    .start-btn:hover {
+      background: linear-gradient(135deg, #2563eb, #4f46e5);
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.6);
+    }
+
+    @media (max-width: 600px) {
+      .grid-item {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">SkillBarter</div>
+    <ul class="nav-links">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="find-skills.html">Find Skills</a></li>
+      <li><a href="post-skill.html">Post Skill</a></li>
+      <li><a href="message.html">Messages</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Grid Section -->
+  <div class="grid-container">
+    <div class="grid-item">
+      <h2>Are you searching for any skill?</h2>
+      <p>Discover talents from a variety of categories to learn and grow.</p>
+      <button class="start-btn" onclick="window.location.href='find-skills.html'">Let's Start</button>
+    </div>
+
+    <div class="grid-item">
+      <h2>Do you want to post any skill?</h2>
+      <p>Share your talent with the world and connect with learners.</p>
+      <button class="start-btn" onclick="window.location.href='post-skill.html'">Let's Start</button>
+    </div>
+
+    <div class="grid-item">
+      <h2>About Us</h2>
+      <p>Learn more about our mission and how SkillBarter empowers people.</p>
+      <button class="start-btn" onclick="window.location.href='about-us.html'">Let's Start</button>
+    </div>
+
+    <div class="grid-item" onclick="window.location.href='schedule-session.html'">
+        <h2>Schedule a Session</h2>
+        <p>Book a time to learn or teach a skill directly with others.</p>
+        <button class="start-btn">Let’s Start</button>
+      </div>
+      
+      <div class="grid-item" onclick="window.location.href='leaderboard.html'">
+        <h2>Top Contributors</h2>
+        <p>See who’s making the biggest impact in the SkillBarter network.</p>
+        <button class="start-btn">Let’s Start</button>
+      </div>
+
+      <div class="grid-item" onclick="window.location.href='daily-skill.html'">
+        <h2>Learn Something New</h2>
+        <p>Discover a new skill every day and keep growing consistently.</p>
+        <button class="start-btn">Let’s Start</button>
+      </div>
+      
+  </div>
+
+</body>
+</html>

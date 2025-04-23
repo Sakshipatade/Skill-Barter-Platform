@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Skills</title>
+  <link rel="stylesheet" href="find-skills.css">
+  <script src="find-skills.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background: #333;
+      color: #fff;
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .find-skills {
+      padding: 2em;
+      text-align: center;
+    }
+
+    #searchBox {
+      width: 60%;
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 2em;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .connect-btn {
+      margin-top: 10px;
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .connect-btn:disabled {
+      background-color: #aaa;
+      cursor: not-allowed;
+    }
+
+    footer {
+      text-align: center;
+      background: #222;
+      color: white;
+      padding: 20px;
+      margin-top: 3em;
+    }
+
+    .social-links {
+      margin-top: 10px;
+    }
+
+    .social-icon {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">SkillBarter</div>
+    <ul class="nav-links">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="find-skills.html">Find Skills</a></li>
+      <li><a href="post-skill.html">Post Skill</a></li>
+      <li><a href="message.html">Messages</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="login.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <section class="find-skills">
+    <h2>Discover Available Skills</h2>
+    <input type="text" id="searchBox" placeholder="Search skills...">
+    <div class="skills-grid" id="skillsContainer">
+      <!-- Skills will be loaded here dynamically -->
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SkillBarter. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#" class="social-icon">🌐 Website</a>
+      <a href="#" class="social-icon">📘 Facebook</a>
+      <a href="#" class="social-icon">🐦 Twitter</a>
+      <a href="#" class="social-icon">📷 Instagram</a>
+    </div>
+  </footer>
+
+</body>
+</html>

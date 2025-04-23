@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile Page - SkillBarter</title>
+  <link rel="stylesheet" href="profile-style.css" />
+  <script src="profile.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">SkillBarter</div>
+    <ul class="nav-links">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="find-skills.html">Find Skills</a></li>
+      <li><a href="post-skill.html">Post Skill</a></li>
+      <li><a href="message.html">Messages</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="login.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Profile Section -->
+  <section class="profile">
+    <div class="profile-wrapper">
+      <div class="profile-card">
+        <div class="profile-pic-container">
+          <img src="profile-placeholder.png" alt="Profile Picture" class="profile-pic" id="profileImage">
+          <input type="file" id="imageUpload" accept="image/*" class="upload-input" />
+          <button class="upload-btn" onclick="uploadPhoto()">📸 Upload Photo</button>
+        </div>
+        <h2 id="profileName">John Doe</h2>
+        <p id="profileEmail">john.doe@example.com</p>
+        <p id="profileBio">Passionate about learning and teaching new skills.</p>
+        <button class="edit-profile-btn" onclick="editProfile()">Edit Profile</button>
+      </div>
+
+      <!-- User Skills -->
+      <div class="user-skills">
+        <h3>Your Posted Skills</h3>
+        <div class="skills-grid" id="userSkills"></div>
+      </div>
+
+      <!-- Profile Stats -->
+      <div class="profile-stats">
+        <h3>Statistics</h3>
+        <div class="stats">
+          <div class="stat-item">
+            <span id="skillCounter">0</span>
+            <p>Skills Posted</p>
+          </div>
+          <div class="stat-item">
+            <span id="connectionsMade">5</span>
+            <p>Connections Made</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Connection Requests Section -->
+      <div class="connection-requests">
+        <h3>Connection Requests</h3>
+        <div id="notificationsContainer">
+          <p>Loading connection requests...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SkillBarter. All rights reserved.</p>
+  </footer>
+</body>
+</html>

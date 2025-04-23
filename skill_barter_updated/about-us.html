@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | SkillBarter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9fafe;
+            color: #333;
+            line-height: 1.6;
+        }
+   
+            nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background: #1e3a8a;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            }
+
+            .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            }
+
+            .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            }
+
+            .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease;
+            }
+
+            .nav-links a:hover {
+            color: white;
+            }
+            header {
+            background: linear-gradient(to right, #3f87a6, #ebf8e1);
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+            margin-top: 40px; /* 👈 This adds space below the navbar */
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1rem;
+            color: black;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        .feature {
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: 0.3s ease;
+        }
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        .feature h3 {
+            margin-bottom: 15px;
+            color: #3f87a6;
+        }
+        .feature p {
+            font-size: 0.95rem;
+        }
+
+        .team-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .team-section h2 {
+            font-size: 2rem;
+            color: #3f87a6;
+            margin-bottom: 20px;
+        }
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        .team-member {
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        .team-member img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top; /* 👈 forces top of image to show more */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+        .team-member h4 {
+            color: #3f87a6;
+            margin-bottom: 5px;
+        }
+        /* .team-member p {
+            font-size: 0.9rem;
+        } */
+
+        footer {
+            background-color: #3f87a6;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">SkillBarter</div>
+    <ul class="nav-links">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="find-skills.html">Find Skills</a></li>
+      <li><a href="post-skill.html">Post Skill</a></li>
+      <li><a href="message.html">Messages</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+  </nav>
+
+    <header>
+        <h1>About SkillBarter</h1>
+        <p>Empowering people to share, learn, and grow through their unique skills.SkillBarter is a platform built to empower people by connecting them through skills. Whether you're a coder wanting to learn guitar, a designer looking to master public speaking, or a chef interested in web development — this is your space. Here, you don’t pay with money. You exchange your skills. You teach something you know, and in return, you learn something new.
+
+            We believe in a world where everyone has something valuable to share. SkillBarter is that place where learning is mutual, growth is unlimited, and community is everything.</p>
+    </header>
+
+    <div class="container">
+        <section class="features">
+            <div class="feature">
+                <h3>Post Skills</h3>
+                <p>Showcase your skills to a growing community and get recognized.</p>
+            </div>
+            <div class="feature">
+                <h3>Find Skills</h3>
+                <p>Explore a wide range of skills offered by passionate individuals.</p>
+            </div>
+            <div class="feature">
+                <h3>Message Users</h3>
+                <p>Communicate easily with skill providers and learners.</p>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2>Meet Our Team</h2>
+            <div class="team">
+                <div class="team-member">
+                    <img src="images/sakshi image.jpeg" alt="Team Member">
+                    <h4>Sakshi Patade</h4>
+                    <!-- <p>Founder & Developer</p> -->
+                </div>
+                <div class="team-member">
+                    <img src="images/reshma 2.jpeg" alt="Team Member">
+                    <h4>Reshma Gade</h4>
+                    <!-- <p>UI/UX Designer</p> -->
+                </div>
+                <div class="team-member">
+                    <img src="images/aniket 2.jpeg" alt="Team Member">
+                    <h4>Aniket Pawar</h4>
+                    <!-- <p>Marketing Lead</p> -->
+                </div>
+
+                <div class="team-member">
+                    <img src="images/priyanka image.jpeg" alt="Team Member">
+                    <h4>Priyanka Rokade</h4>
+                    <!-- <p>Marketing Lead</p> -->
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 SkillBarter. Crafted with passion to empower skills.</p>
+    </footer>
+</body>
+</html>
