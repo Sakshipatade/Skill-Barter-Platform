@@ -1,1 +1,1 @@
-# WAD-PROJECT
+# Skill Barter Platform
